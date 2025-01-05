@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
           width: " 22rem",
         }}
       >
-        <img src={props.src} className="card-img-top" />
+        <img src={props.src} alt={props.title} className="card-img-top" />
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
           <p className="card-text">{props.subtitle}</p>
