@@ -1,36 +1,32 @@
-import React from "react";
+import styled from "styled-components";
 
-const Header = (props) => {
+const HeaderWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #343a40; /* dark background */
+`;
+
+const Title = styled.h1`
+  color: white;
+  font-size: 3rem;
+`;
+
+const Subtitle = styled.p`
+  font-size: 1.5rem;
+  color: gray;
+`;
+
+const Header = ({ title, subtitle }) => {
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-      className="bg-dark"
-    >
+    <HeaderWrapper>
       <div className="container">
-        <h1
-          style={{
-            color: "white",
-            fontSize: "3rem",
-          }}
-        >
-          {props.title}
-        </h1>
-        <p
-          style={{
-            fontSize: "1.5rem",
-            color: "gray",
-          }}
-        >
-          {props.subtitle}
-        </p>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
       </div>
-    </div>
+    </HeaderWrapper>
   );
 };
 
