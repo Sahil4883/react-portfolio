@@ -1,27 +1,13 @@
-import React from "react";
 import SkillList from "../components/SkillList";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-
-import html from "../assets/skillImg/html.png";
-import css from "../assets/skillImg/css.png";
-import js from "../assets/skillImg/js.png";
-import react from "../assets/skillImg/react.png";
-import ts from "../assets/skillImg/ts.png";
-import node from "../assets/skillImg/node.png";
-import ejs from "../assets/skillImg/ejs.png";
-import bootstrap from "../assets/skillImg/bootstrap.png";
-import mongo from "../assets/skillImg/mongo.png";
-import mysql from "../assets/skillImg/mysql.png";
-import php from "../assets/skillImg/php.png";
-import wordpress from "../assets/skillImg/wordpress.png";
-import py from "../assets/skillImg/py.png";
-import tailwind from "../assets/skillImg/tailwind.png";
+import svgIcons from "../assets/svg/skills";
 
 import reactchat from "../assets/projectImg/reactchat.png";
 import rtodo from "../assets/projectImg/rtodo.png";
 import pomo from "../assets/projectImg/pomodoro.png";
+
 const Home = (props) => {
   return (
     <>
@@ -66,26 +52,30 @@ const Home = (props) => {
           style={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContentc: "center",
+            justifyContent: "center", // Fixed typo
             alignItems: "center",
-            gap: "10px",
-            width: "75%",
+            gap: "20px", // Increased gap for better spacing
+            width: "100%", // Adjusted to fill the container
+            maxWidth: "1200px", // Limit the width for better layout
+            margin: "0 auto", // Center the container horizontally
+            padding: "20px", // Add padding for better responsiveness
+            backgroundColor: "#f9f9f9", // Optional: Background color for better visibility
           }}
         >
-          <SkillList name="HTML" src={html} />
-          <SkillList name="CSS" src={css} />
-          <SkillList name="Javascript" src={js} />
-          <SkillList name="React" src={react} />
-          <SkillList name="Typescript" src={ts} />
-          <SkillList name="NodeJS" src={node} />
-          <SkillList name="ExpressJs" src={ejs} />
-          <SkillList name="Bootstrap" src={bootstrap} />
-          <SkillList name="MongoDB" src={mongo} />
-          <SkillList name="MySQL" src={mysql} />
-          <SkillList name="PHP" src={php} />
-          <SkillList name="Wordpress" src={wordpress} />
-          <SkillList name="Python" src={py} />
-          <SkillList name="Tailwind" src={tailwind} />
+          <SkillList name="HTML">{svgIcons.html}</SkillList>
+          <SkillList name="CSS">{svgIcons.css}</SkillList>
+          <SkillList name="Javascript">{svgIcons.js}</SkillList>
+          <SkillList name="React">{svgIcons.react}</SkillList>
+          <SkillList name="Typescript">{svgIcons.ts}</SkillList>
+          <SkillList name="NodeJS">{svgIcons.node}</SkillList>
+          <SkillList name="Express">{svgIcons.ex}</SkillList>
+          <SkillList name="Bootstrap">{svgIcons.bs}</SkillList>
+          <SkillList name="MongoDB">{svgIcons.mgdb}</SkillList>
+          <SkillList name="MYSQL">{svgIcons.mysql}</SkillList>
+          <SkillList name="PHP">{svgIcons.php}</SkillList>
+          <SkillList name="Wordpress">{svgIcons.wp}</SkillList>
+          <SkillList name="Python">{svgIcons.py}</SkillList>
+          <SkillList name="TailwindCSS">{svgIcons.tw}</SkillList>
         </div>
       </div>
 
@@ -95,6 +85,7 @@ const Home = (props) => {
           title="React Chat App."
           subtitle="A Simple React Chat App where users can join and chat with in the room."
           href="https://chat-app-by-sahil.netlify.app/"
+          target="_blank"
         />
         <ProjectCard
           src={rtodo}
@@ -111,9 +102,6 @@ const Home = (props) => {
         <div className="d-flex justify-content-center gap-5">
           <Link to="/projects" className="btn btn-secondary mt-5">
             All Projects
-          </Link>
-          <Link to="/contact" className="btn btn-secondary mt-5">
-            Contact Me
           </Link>
         </div>
       </div>

@@ -54,9 +54,6 @@ const About = () => {
           attention, I thrive on pushing creative boundaries and delivering
           engaging content.
         </p>
-        <Link to="/contact" className="btn btn-secondary mt-5">
-          Contact Me
-        </Link>
       </div>
     </>
   );

@@ -1,6 +1,4 @@
-import React from "react";
-
-const SkillList = (props) => {
+const SkillList = ({ name, children }) => {
   return (
     <div
       className="align-items-center"
@@ -12,13 +10,17 @@ const SkillList = (props) => {
         backgroundColor: "white",
       }}
     >
-      <img
-        src={props.src}
+      <div
         style={{
           width: "40px",
           height: "40px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      />
+      >
+        {children}
+      </div>
       <p
         style={{
           fontSize: "1.3rem",
@@ -26,7 +28,7 @@ const SkillList = (props) => {
           fontWeight: "bold",
         }}
       >
-        {props.name}
+        {name}
       </p>
     </div>
   );
