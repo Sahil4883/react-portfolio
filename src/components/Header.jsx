@@ -1,9 +1,34 @@
-const Header = ({ title, subtitle }) => {
+import React from "react";
+
+const Header = (props) => {
   return (
-    <div className="bg-dark h-screen flex justify-center items-center text-center">
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+      className="bg-dark"
+    >
       <div className="container">
-        <h1 className="text-white text-3xl">{title}</h1>
-        <p className="text-gray-400 text-xl">{subtitle}</p>
+        <h1
+          style={{
+            color: "white",
+            fontSize: "3rem",
+          }}
+        >
+          {props.title}
+        </h1>
+        <p
+          style={{
+            fontSize: "1.5rem",
+            color: "gray",
+          }}
+        >
+          {props.subtitle}
+        </p>
       </div>
     </div>
   );
