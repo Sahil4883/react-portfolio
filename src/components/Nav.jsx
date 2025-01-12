@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
@@ -52,6 +51,15 @@ const Nav = () => {
                 >
                   About
                 </NavLink>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  href="/resume/Full-Stack-Web-Developer.docx"
+                  download="Full-Stack-Web-Developer.docx"
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </div>
